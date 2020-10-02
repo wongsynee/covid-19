@@ -1,25 +1,22 @@
 import React from 'react'
 
-import ProfilePhoto from '../../../images/profile.jpg'
+import Logo from '../../../images/logo-covid-19-meter.svg'
 import {
   HeaderWrapper,
   ImageCircleWrapper,
   Image,
 } from './Header.style'
 
-interface IHeaderProps {
-  profile: {
-    name: string;
-  };
-}
+interface IHeaderProps {}
 
-const Header = ({
-  profile: { name },
-}: IHeaderProps) => {
+const Header = (props: IHeaderProps) => {
   return (
     <HeaderWrapper>
       <ImageCircleWrapper>
-        <Image src={ProfilePhoto} alt={`${name}'s profile photo`} />
+        <Image
+          src={Logo}
+          alt="COVID-19 meter"
+        />
       </ImageCircleWrapper>
     </HeaderWrapper>
   )

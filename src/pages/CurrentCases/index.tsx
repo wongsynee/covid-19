@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { IWorldTotal } from '../../constants/interface'
+import Header from '../../components/blocks/Header'
 
 interface ICurrentCasesProps {
   worldTotal?: IWorldTotal;
@@ -17,9 +18,7 @@ const CurrentCases = ({
   }, [getData])
 
   return (
-    <main>
-      Hello World
-    </main>
+    <Header />
   )
 }
 
