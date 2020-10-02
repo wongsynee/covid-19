@@ -18,8 +18,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${theme.colours.mineShaft};
-    color: ${theme.colours.mineShaft};
+    background-color: ${theme.colour.white};
+    color: ${theme.colour.fiord};
     font: normal normal ${theme.fontWeight.regular} ${theme.fontSize.default}rem/1.2 ${theme.font.primary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -38,12 +38,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${theme.colours.mineShaft};
-    color: ${theme.colours.white};
+    background-color: ${theme.colour.ceriseRed};
+    color: ${theme.colour.white};
   }
 
   ::-moz-selection {
-    background-color: ${theme.colours.mineShaft};
-    color: ${theme.colours.white};
+    background-color: ${theme.colour.ceriseRed};
+    color: ${theme.colour.white};
   }
 `

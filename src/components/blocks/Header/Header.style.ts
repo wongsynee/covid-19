@@ -5,7 +5,7 @@ import { theme } from '../../../theme/Theme'
 const imageSize = '12rem'
 
 export const HeaderWrapper = styled.header`
-  background: ${theme.colours.white};
+  background: ${theme.colour.white};
   padding: 3rem 3vw;
 `
 
