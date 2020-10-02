@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { IWorldTotal } from '../../constants/interface'
+import PageMargin from '../../components/elements/PageMargin'
 import Header from '../../components/blocks/Header'
 
 interface ICurrentCasesProps {
@@ -9,7 +10,8 @@ interface ICurrentCasesProps {
 }
 
 const CurrentCases = ({
-  worldTotal,
+  // # TODO: Do something with worldTotal.
+  // worldTotal,
   getData,
 }: ICurrentCasesProps) => {
   // Get data from the `/data` endpoint on mount.
@@ -18,7 +20,9 @@ const CurrentCases = ({
   }, [getData])
 
   return (
-    <Header />
+    <PageMargin>
+      <Header />
+    </PageMargin>
   )
 }
 

@@ -1,5 +1,7 @@
 {
-  "TotalConfirmed": 33963181,
-  "TotalDeaths": 1014095,
-  "TotalRecovered": 23632494
+  "data": {
+    "TotalConfirmed": 33963181,
+    "TotalDeaths": 1014095,
+    "TotalRecovered": 23632494
+  }
 }
