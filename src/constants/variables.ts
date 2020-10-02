@@ -1,0 +1,1 @@
+export const PRICE = 123.45

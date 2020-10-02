@@ -1,4 +1,4 @@
-# COVID-19
+# COVID-19 Meter
 An application that displays COVID-19 cases in a simple and easy to read format. The application is built on React with the base of [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting Started
