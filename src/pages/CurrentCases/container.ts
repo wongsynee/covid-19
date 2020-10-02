@@ -1,16 +1,15 @@
 import { connect } from 'react-redux'
 
 import {
-  IProfileState,
+  IState,
   selectors,
 } from '../../reducers'
 import { GET_DATA } from '../../actions'
+import CurrentCases from '.'
 
-import Profile from '.'
-
-const mapStateToProps = (state: IProfileState) => {
+const mapStateToProps = (state: IState) => {
   return ({
-    profile: selectors.profile(state),
+    worldTotal: selectors.worldTotal(state),
   })
 }
 
@@ -18,4 +17,4 @@ const actionCreators = {
   getData: GET_DATA.request,
 }
 
-export default connect(mapStateToProps,actionCreators)(Profile)
+export default connect(mapStateToProps,actionCreators)(CurrentCases)

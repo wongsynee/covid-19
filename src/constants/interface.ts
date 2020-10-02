@@ -3,12 +3,12 @@ export interface IAction<P> {
   payload: P;
 }
 
-export interface IProfile {
-  name: string;
+export interface IWorldTotal {
+  TotalConfirmed: number;
+  TotalDeaths: number;
+  TotalRecovered: number;
 }
 
-// ## NOTE: Update types here.
 export interface IData {
-  profile?: IProfile;
-  links?: any;
+  worldTotal?: IWorldTotal;
 }

@@ -2,21 +2,26 @@ import produce from 'immer'
 import { createSelector } from 'reselect'
 
 import { IAction } from '../utils/redux'
-import { IData } from '../constants/interface'
+import {
+  IData,
+  IWorldTotal,
+} from '../constants/interface'
 import { SET_DATA } from '../actions'
 
-// ## NOTE: Update types here.
-export interface IProfileState {
+export interface IState {
   data?: IData;
-  profile?: any;
+  worldTotal?: IWorldTotal;
 }
 
-const initialState: IProfileState = {
+const initialState: IState = {
   data: undefined,
-  profile: undefined,
+  worldTotal: undefined,
 }
 
-const reducer = (state = initialState, action: IAction<any>) => {
+const reducer = (
+  state = initialState,
+  action: IAction<any>,
+) => {
   return (
     produce(state, draft => {
       switch (action.type) {
@@ -28,21 +33,21 @@ const reducer = (state = initialState, action: IAction<any>) => {
   )
 }
 
-const dataSelector = (state: IProfileState) => state.data
+const dataSelector = (state: IState) => state.data
 
 const dataState = createSelector(
   [dataSelector],
   data => data,
 )
 
-const profileState  = createSelector(
+const worldTotalState  = createSelector(
   [dataSelector],
-  data => data && data.profile,
+  data => data && data.worldTotal,
 )
 
 const selectors = {
   data: dataState,
-  profile: profileState,
+  worldTotal: worldTotalState,
 }
 
 export { reducer, selectors }

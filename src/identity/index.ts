@@ -1,1 +1,1 @@
-export const NAME = 'profile'
+export const NAME = 'covid'

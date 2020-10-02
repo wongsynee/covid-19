@@ -10,7 +10,7 @@ import {
   setData,
 } from '../../actions'
 
-// Initiated on Profile page.
+// Initiated on Current Cases page.
 export function * getData() {
   try {
     yield put(API__GET_DATA.request())
@@ -29,7 +29,7 @@ export function * getData() {
       yield put(GET_DATA.failure(payload))
     }
   } catch (error) {
-    // Do something with error.
+    // # TODO: Do something with error.
   }
 }
 
