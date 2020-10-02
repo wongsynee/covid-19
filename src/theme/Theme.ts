@@ -31,6 +31,17 @@ const theme = {
     semiBold: '600',
     extraBold: '800',
   },
+  lineHeight: {
+    default: 1.6,
+  },
+  transition: {
+    speed: {
+      default: '300ms',
+      fast: '100ms',
+      medium: '1000ms',
+      slow: '2000ms',
+    },
+  },
 }
 
 const themeBreakpoints = {

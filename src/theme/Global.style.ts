@@ -29,12 +29,9 @@ export const GlobalStyle = createGlobalStyle`
   h2,
   h3,
   h4,
-  h5 {
-    margin: 0;
-  }
-
+  h5,
   p {
-    margin: 0 0 1rem;
+    margin: 0;
   }
 
   ::selection {
