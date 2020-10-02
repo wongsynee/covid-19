@@ -18,7 +18,13 @@ const theme = {
     primary: 'Raleway, sans-serif',
   },
   fontSize: {
-    default: 1.6,
+    default: '1.6rem',
+    xxs: '1.2rem',
+    xs: '1.4rem',
+    sm: '1.5rem',
+    md: '2rem',
+    lg: '4.4rem',
+    xl: '5rem',
   },
   fontWeight: {
     regular: '400',
@@ -29,10 +35,10 @@ const theme = {
 
 const themeBreakpoints = {
   breakpoints: {
-    extraLarge: 1440,
-    large: 992,
-    medium: 768,
-    small: 480,
+    xl: 1440,
+    lg: 992,
+    md: 768,
+    sm: 480,
   },
 }
 

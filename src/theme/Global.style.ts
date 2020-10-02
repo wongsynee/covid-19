@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${theme.colour.white};
     color: ${theme.colour.fiord};
-    font: normal normal ${theme.fontWeight.regular} ${theme.fontSize.default}rem/1.2 ${theme.font.primary};
+    font: normal normal ${theme.fontWeight.regular} ${theme.fontSize.default}/1.2 ${theme.font.primary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
