@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 
 import { IWorldTotal } from '../../constants/interface'
-import CenteredBlock from '../../components/blocks/CenteredBlock'
 
 interface ICurrentCasesProps {
   worldTotal?: IWorldTotal;
@@ -18,9 +17,9 @@ const CurrentCases = ({
   }, [getData])
 
   return (
-    <CenteredBlock>
+    <main>
       Hello World
-    </CenteredBlock>
+    </main>
   )
 }
 
