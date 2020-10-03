@@ -19,12 +19,16 @@ const Form = ({
   <FormWrapper>
     <RowFlex>
       <Select
+        isClearable
         options={countriesList}
         onChange={(country: ICountriesList) => (
-          setSelectedCountry1(country.value)
+          setSelectedCountry1(country?.value)
         )}
       />
-      <Select options={countriesList} />
+      <Select
+        isClearable
+        options={countriesList}
+      />
     </RowFlex>
   </FormWrapper>
 )
