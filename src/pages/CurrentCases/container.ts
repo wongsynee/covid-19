@@ -11,14 +11,14 @@ import {
 } from '../../actions'
 import CurrentCases from '.'
 
-const mapStateToProps = (state: IState) => {
-  return ({
+const mapStateToProps = (state: IState) => (
+  {
     worldTotal: selectors.worldTotal(state),
     countriesList: selectors.countriesList(state),
     selectedCountry1Data: selectors.selectedCountry1Data(state),
     selectedCountry2Data: selectors.selectedCountry2Data(state),
-  })
-}
+  }
+)
 
 const actionCreators = {
   getData: GET_DATA.request,

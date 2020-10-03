@@ -35,6 +35,9 @@ const CurrentCases = ({
     getData()
   }, [getData])
 
+  const isCountrySelected:boolean =
+    selectedCountry1Data !== undefined || selectedCountry2Data !== undefined
+
   return (
     <PageMargin>
       <Header
@@ -42,15 +45,17 @@ const CurrentCases = ({
         setSelectedCountry1={setSelectedCountry1}
         setSelectedCountry2={setSelectedCountry2}
       />
-      {worldTotal && (
+      {worldTotal && !isCountrySelected && (
         <Worldwide
           worldTotal={worldTotal}
         />
       )}
-      <CountryComparison
-        selectedCountry1Data={selectedCountry1Data}
-        selectedCountry2Data={selectedCountry2Data}
-      />
+      {isCountrySelected && (
+        <CountryComparison
+          selectedCountry1Data={selectedCountry1Data}
+          selectedCountry2Data={selectedCountry2Data}
+        />
+      )}
       <Footer />
     </PageMargin>
   )

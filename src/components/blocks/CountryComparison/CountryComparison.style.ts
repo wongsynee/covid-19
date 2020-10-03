@@ -13,6 +13,7 @@ export const CountryColumn = styled.div`
   width: 50%;
   padding: 0 6rem;
   text-align: left;
+  min-height: 35rem;
 
   &:first-child {
     text-align: right;

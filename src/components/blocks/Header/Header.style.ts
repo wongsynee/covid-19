@@ -4,7 +4,7 @@ import ReactSelect from 'react-select'
 const imageSize = '16rem'
 
 export const HeaderWrapper = styled.header`
-  padding: 4rem 4rem 25rem;
+  padding: 4rem 4rem 15rem;
   background:
     linear-gradient(
       -2.3deg,
