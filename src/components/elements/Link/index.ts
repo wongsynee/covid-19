@@ -14,7 +14,10 @@ export const Link = styled.a`
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width ${({ theme }) => theme.transition.speed.default} ease;
+    transition:
+      width
+      ${({ theme }) => theme.transition.speed.default}
+      ease;
   }
 
   &:hover {

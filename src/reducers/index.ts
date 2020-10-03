@@ -10,7 +10,7 @@ import { SET_DATA } from '../actions'
 
 export interface IState {
   data?: IData;
-  worldTotal?: IWorldTotal;
+  worldTotal?: IWorldTotal[];
 }
 
 const initialState: IState = {

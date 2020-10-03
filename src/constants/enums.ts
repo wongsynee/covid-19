@@ -1,5 +1,5 @@
-export enum LinkType {
-  Classic = 'classic',
-  MusicPlayer = 'musicPlayer',
-  Shows = 'shows',
+export enum TotalCaseTypes {
+  Confirmed = 'Confirmed',
+  Deaths = 'Deaths',
+  Recovered = 'Recovered',
 }
