@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CaseTypes } from '../../../constants/enums'
+import { ISelectedCountryList } from '../../../constants/interface'
 import { formatNumber } from '../../../utils/formatters'
 import {
   List,
@@ -11,11 +11,7 @@ import {
 
 interface IInfoListProps {
   isReversed?: boolean;
-  list: {
-    type: CaseTypes;
-    amount: number;
-    label: string;
-  }[]
+  list: ISelectedCountryList[];
 }
 
 const InfoList = ({

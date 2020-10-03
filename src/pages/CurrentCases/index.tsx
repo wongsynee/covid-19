@@ -3,17 +3,18 @@ import React, { useEffect } from 'react'
 import {
   IWorldTotal,
   ICountriesList,
+  ISelectedCountryData,
 } from '../../constants/interface'
 import PageMargin from '../../components/elements/PageMargin'
 import Header from '../../components/blocks/Header'
 import Worldwide from '../../components/blocks/Worldwide'
+import CountryComparison from '../../components/blocks/CountryComparison'
 import Footer from '../../components/blocks/Footer'
 
 interface ICurrentCasesProps {
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
-  // # TODO: Update this to a type that matches InfoList
-  selectedCountry1Data: any;
+  selectedCountry1Data?: ISelectedCountryData;
   getData(): void;
   setSelectedCountry1(): void;
 }
@@ -41,6 +42,9 @@ const CurrentCases = ({
           worldTotal={worldTotal}
         />
       )}
+      <CountryComparison
+        selectedCountry1Data={selectedCountry1Data}
+      />
       <Footer />
     </PageMargin>
   )

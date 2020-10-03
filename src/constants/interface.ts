@@ -15,6 +15,17 @@ export interface ICountriesList {
   label: string;
 }
 
+export interface ISelectedCountryList {
+  type: CaseTypes;
+  amount: number;
+  label: string;
+}
+
+export interface ISelectedCountryData {
+  name: string;
+  list: ISelectedCountryList[]
+}
+
 interface IAPIGlobal {
   NewConfirmed: number;
   NewDeaths: number;

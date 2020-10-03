@@ -8,6 +8,7 @@ import {
   IWorldTotal,
   ICountriesList,
   IAPICountry,
+  ISelectedCountryData,
 } from '../constants/interface'
 import {
   SET_DATA,
@@ -19,6 +20,7 @@ export interface IState {
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
   selectedCountry1?: string;
+  selectedCountry1Data?: ISelectedCountryData;
 }
 
 const initialState: IState = {
@@ -26,6 +28,7 @@ const initialState: IState = {
   worldTotal: undefined,
   countriesList: undefined,
   selectedCountry1: undefined,
+  selectedCountry1Data: undefined,
 }
 
 const reducer = (
@@ -106,9 +109,47 @@ const selectedCountry1DataState = createSelector(
   [dataSelector, selectedCountry1Selector],
   (data, selectedCountry1) => {
     if (data?.Countries && selectedCountry1) {
-      return data?.Countries.find((country: IAPICountry) => {
-        return country.Slug === selectedCountry1
-      })
+      const selectedCountry = data?.Countries.find((country: IAPICountry) => (
+        country.Slug === selectedCountry1
+      ))
+      if (selectedCountry) {
+        return {
+          name: selectedCountry.Country,
+          list: [
+            {
+              type: CaseTypes.Confirmed,
+              amount: selectedCountry.NewConfirmed,
+              label: 'New confirmed',
+            },
+            {
+              type: CaseTypes.Confirmed,
+              amount: selectedCountry.TotalConfirmed,
+              label: 'Total confirmed',
+            },
+            {
+              type: CaseTypes.Deaths,
+              amount: selectedCountry.NewDeaths,
+              label: 'New deaths',
+            },
+            {
+              type: CaseTypes.Deaths,
+              amount: selectedCountry.TotalDeaths,
+              label: 'Total deaths',
+            },
+            {
+              type: CaseTypes.Recovered,
+              amount: selectedCountry.NewRecovered,
+              label: 'New recovered',
+            },
+            {
+              type: CaseTypes.Recovered,
+              amount: selectedCountry.TotalRecovered,
+              label: 'Total recovered',
+            },
+          ],
+        }
+      }
+      return undefined
     }
   },
 )
