@@ -1,4 +1,4 @@
-const theme = {
+export const theme = {
   borderRadius: {
     default: '1.5rem',
     circle: '50%',
@@ -42,9 +42,6 @@ const theme = {
       slow: '2000ms',
     },
   },
-}
-
-const themeBreakpoints = {
   breakpoints: {
     xl: 1440,
     lg: 992,
@@ -52,5 +49,3 @@ const themeBreakpoints = {
     sm: 480,
   },
 }
-
-export { theme, themeBreakpoints }
