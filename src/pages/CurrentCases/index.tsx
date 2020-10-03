@@ -15,16 +15,20 @@ interface ICurrentCasesProps {
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
   selectedCountry1Data?: ISelectedCountryData;
+  selectedCountry2Data?: ISelectedCountryData;
   getData(): void;
   setSelectedCountry1(): void;
+  setSelectedCountry2(): void;
 }
 
 const CurrentCases = ({
   worldTotal,
   countriesList,
   selectedCountry1Data,
+  selectedCountry2Data,
   getData,
   setSelectedCountry1,
+  setSelectedCountry2,
 }: ICurrentCasesProps) => {
   // Get data from the `/data` endpoint on mount.
   useEffect(() => {
@@ -36,6 +40,7 @@ const CurrentCases = ({
       <Header
         countriesList={countriesList}
         setSelectedCountry1={setSelectedCountry1}
+        setSelectedCountry2={setSelectedCountry2}
       />
       {worldTotal && (
         <Worldwide

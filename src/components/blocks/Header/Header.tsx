@@ -11,11 +11,13 @@ import {
 interface IHeaderProps {
   countriesList?: ICountriesList[];
   setSelectedCountry1(): void;
+  setSelectedCountry2(): void;
 }
 
 const Header = ({
   countriesList,
   setSelectedCountry1,
+  setSelectedCountry2,
 }: IHeaderProps) => (
   <HeaderWrapper role="banner">
     <Logo />
@@ -23,6 +25,7 @@ const Header = ({
     <Form
       countriesList={countriesList}
       setSelectedCountry1={setSelectedCountry1}
+      setSelectedCountry2={setSelectedCountry2}
     />
   </HeaderWrapper>
 )

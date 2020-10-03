@@ -10,11 +10,13 @@ import {
 interface IFormProps {
   countriesList?: ICountriesList[];
   setSelectedCountry1(value: string): void;
+  setSelectedCountry2(value: string): void;
 }
 
 const Form = ({
   countriesList,
   setSelectedCountry1,
+  setSelectedCountry2,
 }: IFormProps) => (
   <FormWrapper>
     <RowFlex>
@@ -28,6 +30,9 @@ const Form = ({
       <Select
         isClearable
         options={countriesList}
+        onChange={(country: ICountriesList) => (
+          setSelectedCountry2(country?.value)
+        )}
       />
     </RowFlex>
   </FormWrapper>

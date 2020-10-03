@@ -7,6 +7,7 @@ import {
 import {
   GET_DATA,
   setSelectedCountry1,
+  setSelectedCountry2,
 } from '../../actions'
 import CurrentCases from '.'
 
@@ -21,6 +22,7 @@ const mapStateToProps = (state: IState) => {
 const actionCreators = {
   getData: GET_DATA.request,
   setSelectedCountry1,
+  setSelectedCountry2,
 }
 
 export default connect(mapStateToProps,actionCreators)(CurrentCases)

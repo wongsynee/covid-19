@@ -13,6 +13,7 @@ import {
 import {
   SET_DATA,
   SET_SELECTED_COUNTRY_1,
+  SET_SELECTED_COUNTRY_2,
 } from '../actions'
 
 export interface IState {
@@ -20,6 +21,7 @@ export interface IState {
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
   selectedCountry1?: string;
+  selectedCountry2?: string;
   selectedCountry1Data?: ISelectedCountryData;
 }
 
@@ -28,6 +30,7 @@ const initialState: IState = {
   worldTotal: undefined,
   countriesList: undefined,
   selectedCountry1: undefined,
+  selectedCountry2: undefined,
   selectedCountry1Data: undefined,
 }
 
@@ -43,6 +46,9 @@ const reducer = (
           break
         case SET_SELECTED_COUNTRY_1:
           draft.selectedCountry1 = action.payload
+          break
+        case SET_SELECTED_COUNTRY_2:
+          draft.selectedCountry2 = action.payload
           break
       }
     })
@@ -104,7 +110,6 @@ const countriesListState = createSelector(
   },
 )
 
-// # TODO: Update this to a type that matches InfoList
 const selectedCountry1DataState = createSelector(
   [dataSelector, selectedCountry1Selector],
   (data, selectedCountry1) => {
