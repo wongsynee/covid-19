@@ -5,11 +5,13 @@ import { CaseTypes } from '../../../constants/enums'
 import {
   CountryRow,
   CountryColumn,
+  Heading,
 } from './CountryComparison.style'
 
 const CountryComparison = () => (
   <CountryRow>
     <CountryColumn>
+      <Heading>Malaysia</Heading>
       {/* # TODO: Remove hardcoded lists. */}
       <InfoList
         list={[
@@ -47,6 +49,7 @@ const CountryComparison = () => (
       />
     </CountryColumn>
     <CountryColumn>
+      <Heading>Australia</Heading>
       <InfoList
         isReversed
         list={[
