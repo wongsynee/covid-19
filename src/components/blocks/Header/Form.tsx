@@ -1,17 +1,21 @@
 import React from 'react'
 
-import { COUNTRIES } from '../../../constants/variables'
+import { ICountriesList } from '../../../constants/interface'
 import RowFlex from '../../elements/RowFlex'
 import {
   FormWrapper,
   Select,
 } from './Header.style'
 
-const Form = () => (
+interface IFormProps {
+  countriesList?: ICountriesList[];
+}
+
+const Form = ({ countriesList }: IFormProps) => (
   <FormWrapper>
     <RowFlex>
-      <Select options={COUNTRIES} />
-      <Select options={COUNTRIES} />
+      <Select options={countriesList} />
+      <Select options={countriesList} />
     </RowFlex>
   </FormWrapper>
 )

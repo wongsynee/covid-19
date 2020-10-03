@@ -10,6 +10,7 @@ import CurrentCases from '.'
 const mapStateToProps = (state: IState) => {
   return ({
     worldTotal: selectors.worldTotal(state),
+    countriesList: selectors.countriesList(state),
   })
 }
 

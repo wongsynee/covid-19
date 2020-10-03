@@ -10,6 +10,11 @@ export interface IWorldTotal {
   amount: number;
 }
 
+export interface ICountriesList {
+  value: string;
+  label: string;
+}
+
 interface IAPIGlobal {
   NewConfirmed: number;
   NewDeaths: number;
@@ -19,7 +24,7 @@ interface IAPIGlobal {
   TotalRecovered: number;
 }
 
-interface IAPICountry extends IAPIGlobal {
+export interface IAPICountry extends IAPIGlobal {
   Country: string;
   CountryCode: string;
   Slug: string;
