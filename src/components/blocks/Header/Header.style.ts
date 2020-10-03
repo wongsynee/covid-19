@@ -21,7 +21,7 @@ export const Image = styled.img`
   max-width: ${imageSize};
 `
 
-export const TextWrapper = styled.div`
+export const HeadingWrapper = styled.div`
   max-width: 55rem;
   margin-bottom: 5rem;
 `

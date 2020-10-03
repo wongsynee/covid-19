@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Logo from './Logo'
-import Text from './Text'
+import Heading from './Heading'
 import Form from './Form'
 import {
   HeaderWrapper,
@@ -10,7 +10,7 @@ import {
 const Header = () => (
   <HeaderWrapper role="banner">
     <Logo />
-    <Text />
+    <Heading />
     <Form />
   </HeaderWrapper>
 )
