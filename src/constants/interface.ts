@@ -1,4 +1,4 @@
-import { TotalCaseTypes } from './enums'
+import { CaseTypes } from './enums'
 
 export interface IAction<P> {
   type: string;
@@ -6,7 +6,7 @@ export interface IAction<P> {
 }
 
 export interface IWorldTotal {
-  type: TotalCaseTypes;
+  type: CaseTypes;
   amount: number;
 }
 

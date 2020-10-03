@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 
-import { TotalCaseTypes } from '../../../constants/enums'
+import { CaseTypes } from '../../../constants/enums'
 
 interface HTMLSpanElement {
-  type?: TotalCaseTypes;
+  type?: CaseTypes;
 }
 
 const bluePill = css`
@@ -26,11 +26,11 @@ export const PillText = styled.span<HTMLSpanElement>`
   color: ${({ theme }) => theme.colour.white};
   ${({ type }) => {
     switch (type) {
-      case TotalCaseTypes.Confirmed:
+      case CaseTypes.Confirmed:
         return bluePill
-      case TotalCaseTypes.Deaths:
+      case CaseTypes.Deaths:
         return redPill
-      case TotalCaseTypes.Recovered:
+      case CaseTypes.Recovered:
       default:
         return greenPill
     }

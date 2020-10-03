@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 // import { IWorldTotal } from '../../constants/interface'
-import { TotalCaseTypes } from '../../constants/enums'
+import { CaseTypes } from '../../constants/enums'
 import PageMargin from '../../components/elements/PageMargin'
 import Header from '../../components/blocks/Header'
 import Worldwide from '../../components/blocks/Worldwide'
@@ -26,15 +26,15 @@ const CurrentCases = ({
   // pass it down from the reducer.
   const worldTotal = [
     {
-      type: TotalCaseTypes.Confirmed,
+      type: CaseTypes.Confirmed,
       amount: 33635750,
     },
     {
-      type: TotalCaseTypes.Deaths,
+      type: CaseTypes.Deaths,
       amount: 1007689,
     },
     {
-      type: TotalCaseTypes.Recovered,
+      type: CaseTypes.Recovered,
       amount: 23383120,
     },
   ]
