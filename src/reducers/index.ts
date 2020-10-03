@@ -2,6 +2,7 @@ import produce from 'immer'
 import { createSelector } from 'reselect'
 
 import { IAction } from '../utils/redux'
+import { CaseTypes } from '../constants/enums'
 import {
   IData,
   IWorldTotal,
@@ -42,7 +43,29 @@ const dataState = createSelector(
 
 const worldTotalState  = createSelector(
   [dataSelector],
-  data => data && data.worldTotal,
+  data => {
+    if (data?.Global) {
+      const {
+        TotalConfirmed,
+        TotalDeaths,
+        TotalRecovered,
+      } = data.Global
+      return [
+        {
+          type: CaseTypes.Confirmed,
+          amount: TotalConfirmed,
+        },
+        {
+          type: CaseTypes.Deaths,
+          amount: TotalDeaths,
+        },
+        {
+          type: CaseTypes.Recovered,
+          amount: TotalRecovered,
+        },
+      ]
+    }
+  },
 )
 
 const selectors = {
