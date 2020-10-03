@@ -9,12 +9,21 @@ import {
 
 interface IFormProps {
   countriesList?: ICountriesList[];
+  setSelectedCountry1(value: string): void;
 }
 
-const Form = ({ countriesList }: IFormProps) => (
+const Form = ({
+  countriesList,
+  setSelectedCountry1,
+}: IFormProps) => (
   <FormWrapper>
     <RowFlex>
-      <Select options={countriesList} />
+      <Select
+        options={countriesList}
+        onChange={(country: ICountriesList) => (
+          setSelectedCountry1(country.value)
+        )}
+      />
       <Select options={countriesList} />
     </RowFlex>
   </FormWrapper>

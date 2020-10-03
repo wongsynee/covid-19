@@ -10,13 +10,20 @@ import {
 
 interface IHeaderProps {
   countriesList?: ICountriesList[];
+  setSelectedCountry1(): void;
 }
 
-const Header = ({ countriesList }: IHeaderProps) => (
+const Header = ({
+  countriesList,
+  setSelectedCountry1,
+}: IHeaderProps) => (
   <HeaderWrapper role="banner">
     <Logo />
     <Heading />
-    <Form countriesList={countriesList} />
+    <Form
+      countriesList={countriesList}
+      setSelectedCountry1={setSelectedCountry1}
+    />
   </HeaderWrapper>
 )
 

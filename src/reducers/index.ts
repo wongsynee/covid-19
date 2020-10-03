@@ -9,18 +9,23 @@ import {
   ICountriesList,
   IAPICountry,
 } from '../constants/interface'
-import { SET_DATA } from '../actions'
+import {
+  SET_DATA,
+  SET_SELECTED_COUNTRY_1,
+} from '../actions'
 
 export interface IState {
   data?: IData;
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
+  selectedCountry1?: string;
 }
 
 const initialState: IState = {
   data: undefined,
   worldTotal: undefined,
   countriesList: undefined,
+  selectedCountry1: undefined,
 }
 
 const reducer = (
@@ -33,12 +38,16 @@ const reducer = (
         case SET_DATA:
           draft.data = action.payload
           break
+        case SET_SELECTED_COUNTRY_1:
+          draft.selectedCountry1 = action.payload
+          break
       }
     })
   )
 }
 
 const dataSelector = (state: IState) => state.data
+const selectedCountry1Selector = (state: IState) => state.selectedCountry1
 
 const dataState = createSelector(
   [dataSelector],
@@ -92,10 +101,23 @@ const countriesListState = createSelector(
   },
 )
 
+// # TODO: Update this to a type that matches InfoList
+const selectedCountry1DataState = createSelector(
+  [dataSelector, selectedCountry1Selector],
+  (data, selectedCountry1) => {
+    if (data?.Countries && selectedCountry1) {
+      return data?.Countries.find((country: IAPICountry) => {
+        return country.Slug === selectedCountry1
+      })
+    }
+  },
+)
+
 const selectors = {
   data: dataState,
   worldTotal: worldTotalState,
   countriesList: countriesListState,
+  selectedCountry1Data: selectedCountry1DataState,
 }
 
 export { reducer, selectors }

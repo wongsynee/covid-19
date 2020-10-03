@@ -27,7 +27,10 @@ const InfoList = ({
       list.map((item, index) => {
         const { type, amount, label } = item
         return (
-          <ListItem isReversed={isReversed}>
+          <ListItem
+            key={`${type}-${index}`}
+            isReversed={isReversed}
+          >
             <Amount
               isReversed={isReversed}
               type={type}

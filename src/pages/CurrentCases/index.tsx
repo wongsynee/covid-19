@@ -12,13 +12,18 @@ import Footer from '../../components/blocks/Footer'
 interface ICurrentCasesProps {
   worldTotal?: IWorldTotal[];
   countriesList?: ICountriesList[];
+  // # TODO: Update this to a type that matches InfoList
+  selectedCountry1Data: any;
   getData(): void;
+  setSelectedCountry1(): void;
 }
 
 const CurrentCases = ({
   worldTotal,
   countriesList,
+  selectedCountry1Data,
   getData,
+  setSelectedCountry1,
 }: ICurrentCasesProps) => {
   // Get data from the `/data` endpoint on mount.
   useEffect(() => {
@@ -29,6 +34,7 @@ const CurrentCases = ({
     <PageMargin>
       <Header
         countriesList={countriesList}
+        setSelectedCountry1={setSelectedCountry1}
       />
       {worldTotal && (
         <Worldwide
