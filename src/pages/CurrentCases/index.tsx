@@ -49,6 +49,7 @@ const CurrentCases = ({
       )}
       <CountryComparison
         selectedCountry1Data={selectedCountry1Data}
+        selectedCountry2Data={selectedCountry2Data}
       />
       <Footer />
     </PageMargin>

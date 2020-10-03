@@ -11,10 +11,12 @@ import {
 
 interface ICountryComparisonProps {
   selectedCountry1Data?: ISelectedCountryData;
+  selectedCountry2Data?: ISelectedCountryData;
 }
 
 const CountryComparison = ({
   selectedCountry1Data,
+  selectedCountry2Data,
 }: ICountryComparisonProps) => (
   <CountryRow>
     <CountryColumn>
@@ -28,43 +30,15 @@ const CountryComparison = ({
       )}
     </CountryColumn>
     <CountryColumn>
-      {/* # TODO: Remove hardcoded lists. */}
-      <Heading>Australia</Heading>
-      <InfoList
-        isReversed
-        list={[
-          {
-            type: CaseTypes.Confirmed,
-            amount: 89,
-            label: 'New confirmed',
-          },
-          {
-            type: CaseTypes.Confirmed,
-            amount: 11224,
-            label: 'Total confirmed',
-          },
-          {
-            type: CaseTypes.Deaths,
-            amount: 2,
-            label: 'New deaths',
-          },
-          {
-            type: CaseTypes.Deaths,
-            amount: 136,
-            label: 'Total deaths',
-          },
-          {
-            type: CaseTypes.Recovered,
-            amount: 28,
-            label: 'New recovered',
-          },
-          {
-            type: CaseTypes.Recovered,
-            amount: 9967,
-            label: 'Total recovered',
-          },
-        ]}
-      />
+      <Heading>
+        {selectedCountry2Data?.name}
+      </Heading>
+      {selectedCountry2Data && (
+        <InfoList
+          isReversed
+          list={selectedCountry2Data.list}
+        />
+      )}
     </CountryColumn>
   </CountryRow>
 )

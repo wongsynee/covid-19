@@ -16,6 +16,7 @@ const mapStateToProps = (state: IState) => {
     worldTotal: selectors.worldTotal(state),
     countriesList: selectors.countriesList(state),
     selectedCountry1Data: selectors.selectedCountry1Data(state),
+    selectedCountry2Data: selectors.selectedCountry2Data(state),
   })
 }
 
