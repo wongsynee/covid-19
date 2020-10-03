@@ -27,7 +27,7 @@ export const WorldwideListItem = styled.li`
 `
 
 export const WorldwideListText = styled.span`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme }) => theme.fontSize.xxl};
   font-weight: ${({ theme }) => theme.fontWeight.extraBold};
   margin-left: 2rem;
 `

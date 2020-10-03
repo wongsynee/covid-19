@@ -23,8 +23,9 @@ export const theme = {
     xs: '1.4rem',
     sm: '1.5rem',
     md: '2rem',
-    lg: '4.4rem',
-    xl: '5rem',
+    lg: '3rem',
+    xl: '4.4rem',
+    xxl: '5rem',
   },
   fontWeight: {
     regular: '400',
@@ -43,9 +44,8 @@ export const theme = {
     },
   },
   breakpoints: {
-    xl: 1440,
-    lg: 992,
-    md: 768,
-    sm: 480,
+    lg: '(min-width: 768px)',
+    md: '(min-width: 480px) and (max-width: 767px)',
+    sm: '(max-width: 479px)',
   },
 }
