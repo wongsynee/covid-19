@@ -5,6 +5,7 @@ import { CaseTypes } from '../../constants/enums'
 import PageMargin from '../../components/elements/PageMargin'
 import Header from '../../components/blocks/Header'
 import Worldwide from '../../components/blocks/Worldwide'
+import CountryComparison from '../../components/blocks/CountryComparison'
 import Footer from '../../components/blocks/Footer'
 
 interface ICurrentCasesProps {
@@ -45,6 +46,7 @@ const CurrentCases = ({
       <Worldwide
         worldTotal={worldTotal}
       />
+      <CountryComparison />
       <Footer />
     </PageMargin>
   )
