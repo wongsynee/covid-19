@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import {
   IWorldTotal,
@@ -39,25 +40,27 @@ const CurrentCases = ({
     selectedCountry1Data !== undefined || selectedCountry2Data !== undefined
 
   return (
-    <PageMargin>
-      <Header
-        countriesList={countriesList}
-        setSelectedCountry1={setSelectedCountry1}
-        setSelectedCountry2={setSelectedCountry2}
-      />
-      {worldTotal && !isCountrySelected && (
-        <Worldwide
-          worldTotal={worldTotal}
+    <ParallaxProvider>
+      <PageMargin>
+        <Header
+          countriesList={countriesList}
+          setSelectedCountry1={setSelectedCountry1}
+          setSelectedCountry2={setSelectedCountry2}
         />
-      )}
-      {isCountrySelected && (
-        <CountryComparison
-          selectedCountry1Data={selectedCountry1Data}
-          selectedCountry2Data={selectedCountry2Data}
-        />
-      )}
-      <Footer />
-    </PageMargin>
+        {worldTotal && !isCountrySelected && (
+          <Worldwide
+            worldTotal={worldTotal}
+          />
+        )}
+        {isCountrySelected && (
+          <CountryComparison
+            selectedCountry1Data={selectedCountry1Data}
+            selectedCountry2Data={selectedCountry2Data}
+          />
+        )}
+        <Footer />
+      </PageMargin>
+    </ParallaxProvider>
   )
 }
 
