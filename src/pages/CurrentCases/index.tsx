@@ -39,6 +39,7 @@ const CurrentCases = ({
   const isCountrySelected:boolean =
     selectedCountry1Data !== undefined || selectedCountry2Data !== undefined
 
+  // # TODO: Add a loading spinner when fetching data.
   return (
     <ParallaxProvider>
       <PageMargin>
