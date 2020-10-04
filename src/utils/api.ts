@@ -1,7 +1,7 @@
 export const fetchData = async() => {
   try {
     const response = await fetch(
-      'http://localhost:3000/data',
+      `${process.env.REACT_APP_COVID_API}/summary`,
       {
         method: 'GET',
         headers: {
