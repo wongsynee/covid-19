@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Parallax } from 'react-scroll-parallax'
 
-const PillIcon = styled(Parallax)`
+const PillIconLeft = styled(Parallax)`
   position: absolute;
   width: 5rem;
   left: 2.5rem;
@@ -16,4 +16,4 @@ const PillIcon = styled(Parallax)`
   }
 `
 
-export default PillIcon
+export default PillIconLeft

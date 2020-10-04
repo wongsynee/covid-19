@@ -5,7 +5,7 @@ import { theme } from '../../../theme/Theme'
 import { ICountriesList } from '../../../constants/interface'
 import VirusIconBig from '../../elements/VirusIconBig'
 import virusSrc from '../../../images/icon-virus.svg'
-import PillIcon from '../../elements/PillIcon'
+import PillIconLeft from '../../elements/PillIconLeft'
 import pillSrc from '../../../images/icon-pill.svg'
 import Logo from './Logo'
 import Heading from './Heading'
@@ -36,12 +36,12 @@ const Header = ({
         >
           <img src={virusSrc} alt="Virus icon" />
         </VirusIconBig>
-        <PillIcon
+        <PillIconLeft
           y={matches.lg ? [340, -100] : [450, -50]}
           x={[0, 0]}
         >
           <img src={pillSrc} alt="Pill icon" />
-        </PillIcon>
+        </PillIconLeft>
         <Form
           countriesList={countriesList}
           setSelectedCountry1={setSelectedCountry1}
