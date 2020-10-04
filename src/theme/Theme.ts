@@ -44,8 +44,8 @@ export const theme = {
     },
   },
   breakpoints: {
-    lg: '(min-width: 768px)',
-    md: '(min-width: 480px) and (max-width: 767px)',
-    sm: '(max-width: 479px)',
+    lg: '(min-width: 1120px)',
+    md: '(min-width: 768px) and (max-width: 1119px)',
+    sm: '(max-width: 767px)',
   },
 }

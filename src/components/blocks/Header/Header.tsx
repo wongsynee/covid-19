@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { ICountriesList } from '../../../constants/interface'
+import virusSrc from '../../../images/icon-virus.svg'
+import VirusIconBig from '../../elements/VirusIconBig'
 import Logo from './Logo'
 import Heading from './Heading'
 import Form from './Form'
@@ -22,6 +24,12 @@ const Header = ({
   <HeaderWrapper role="banner">
     <Logo />
     <Heading />
+    <VirusIconBig
+      y={[200, -100]}
+      x={[50, 50]}
+    >
+      <img src={virusSrc} alt="Virus icon" />
+    </VirusIconBig>
     <Form
       countriesList={countriesList}
       setSelectedCountry1={setSelectedCountry1}
