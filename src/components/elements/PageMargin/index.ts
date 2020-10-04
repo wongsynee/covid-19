@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PageMargin = styled.div`
+const PageMargin = styled.div`
   margin: 1.5rem;
   min-height: 100vh;
 

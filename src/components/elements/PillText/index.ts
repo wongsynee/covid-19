@@ -18,7 +18,7 @@ const greenPill = css`
   background-color: ${({ theme }) => theme.colour.mantis};
 `
 
-export const PillText = styled.span<HTMLSpanElement>`
+const PillText = styled.span<HTMLSpanElement>`
   font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: ${({ theme }) => theme.fontWeight.extraBold};
   border-radius: ${({ theme }) => theme.borderRadius.default};

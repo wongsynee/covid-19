@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const H1 = styled.h1`
+const H1 = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.lg};
 
   @media ${({ theme }) => theme.breakpoints.lg} {

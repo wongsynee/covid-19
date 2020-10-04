@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const RowFlex = styled.div`
+const RowFlex = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

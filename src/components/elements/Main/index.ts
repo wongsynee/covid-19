@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Main = styled.main`
+const Main = styled.main`
   padding: 0rem 4rem 15rem;
   background:
     linear-gradient(
