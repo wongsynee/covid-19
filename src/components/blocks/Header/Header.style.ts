@@ -4,13 +4,17 @@ import ReactSelect from 'react-select'
 const imageSize = '16rem'
 
 export const HeaderWrapper = styled.header`
-  padding: 4rem 4rem 15rem;
+  padding: 2.5rem 2.5rem 15rem;
   background:
     linear-gradient(
       -2.3deg,
       ${({ theme }) => theme.colour.softPeach} 15%,
       ${({ theme }) => theme.colour.pippin} 15.1%
     );
+
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    padding: 4rem 4rem 15rem;
+  }
 `
 
 export const LogoWrapper = styled.div`
