@@ -35,9 +35,18 @@ export const FormWrapper = styled.form`
 `
 
 export const Select = styled(ReactSelect)`
-  width: 47.5%;
+  width: 100%;
 
   &:first-child {
-    margin-right: 5%;
+    margin-bottom: 2rem;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    width: 47.5%;
+
+    &:first-child {
+      margin-bottom: 0;
+      margin-right: 5%;
+    }
   }
 `

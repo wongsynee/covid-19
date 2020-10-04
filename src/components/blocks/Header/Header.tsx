@@ -37,7 +37,7 @@ const Header = ({
           <img src={virusSrc} alt="Virus icon" />
         </VirusIconBig>
         <PillIconLeft
-          y={matches.lg ? [340, -100] : [450, -50]}
+          y={matches.lg ? [340, -100] : [800, -50]}
           x={[0, 0]}
         >
           <img src={pillSrc} alt="Pill icon" />
