@@ -1,5 +1,7 @@
 import React from 'react'
+import Media from 'react-media'
 
+import { theme } from '../../../theme/Theme'
 import InfoList from '../../elements/InfoList'
 import Main from '../../elements/Main'
 import { ISelectedCountryData } from '../../../constants/interface'
@@ -18,31 +20,40 @@ const CountryComparison = ({
   selectedCountry1Data,
   selectedCountry2Data,
 }: ICountryComparisonProps) => (
-  <Main>
-    <CountryRow>
-      <CountryColumn>
-        <Heading>
-          {selectedCountry1Data?.name}
-        </Heading>
-        {selectedCountry1Data && (
-          <InfoList
-            list={selectedCountry1Data.list}
-          />
-        )}
-      </CountryColumn>
-      <CountryColumn>
-        <Heading>
-          {selectedCountry2Data?.name}
-        </Heading>
-        {selectedCountry2Data && (
-          <InfoList
-            isReversed
-            list={selectedCountry2Data.list}
-          />
-        )}
-      </CountryColumn>
-    </CountryRow>
-  </Main>
+  <Media queries={theme.breakpoints}>
+    {matches => (
+      <Main>
+        <CountryRow>
+          <CountryColumn>
+            {selectedCountry1Data && (
+              <>
+                <Heading>
+                  {selectedCountry1Data.name}
+                </Heading>
+                <InfoList
+                  isReversed={!matches.lg}
+                  list={selectedCountry1Data.list}
+                />
+              </>
+            )}
+          </CountryColumn>
+          <CountryColumn>
+            {selectedCountry2Data && (
+              <>
+                <Heading>
+                  {selectedCountry2Data.name}
+                </Heading>
+                <InfoList
+                  isReversed
+                  list={selectedCountry2Data.list}
+                />
+              </>
+            )}
+          </CountryColumn>
+        </CountryRow>
+      </Main>
+    )}
+  </Media>
 )
 
 export default CountryComparison
